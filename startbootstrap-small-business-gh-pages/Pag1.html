@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 1</title>
+
+    
+</head>
+<body>
+
+    <h1>Números pares entre 1 e 5000</h1>
+        <button onclick="contar()" id="botao">Contar</button>
+            <section id="saida">
+                <p>Aperte o botão para contar</p>
+            </section>
+
+<script>
+    function contar() 
+
+    {
+    let saida = document.getElementById('saida')
+
+    saida.innerHTML += `<h2>Números pares de 1 até 5000</h2>`
+    let cont = 2
+    while (cont <= 5000) {
+        saida.innerHTML += ` ${cont}`
+        cont += 2 // Corresponde a cont = cont + 2
+    }
+    saida.innerHTML 
+    }
+</script>
+</body>
+</html>

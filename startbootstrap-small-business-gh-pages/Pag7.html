@@ -1,0 +1,46 @@
+<body>
+    <h3>Crie uma página que receba N valores do usuário. Crie botões para mostrar todos os valores inseridos, o maior valor e o menor valor do vetor.</h3>
+    
+    <form action="" method="post">
+        Digite um valor: <input type="number" id="valor"><br>
+        <input type="button" value="Inserir" onclick="inserir()">
+        <input type="button" value="Exibir" onclick="exibir()">
+        <input type="button" value="Maior/Menor" onclick="MM()">
+        <input type="button" value="Limpar" onclick="window.location.reload()">
+    </form>
+
+    <h4 id="respost1"></h4>
+    <h4 id="respost2"></h4>
+    <script>
+        var lista = [];
+function inserir () {
+    let valor= document.getElementById('valor').value;
+    lista.push(valor);
+    document.getElementById('valor'). value = "";
+    document.getElementById('valor').focus();
+}
+
+
+function exibir() {
+    var resposta2 = document.getElementById('respost2');
+    resposta2.innerHTML = "";
+    for (let i=0; i<lista.length; i++){
+        resposta2.innerHTML += lista[i] + "-";
+    }
+    document.getElementById('valor').focus();
+    document.getElementById('valor').value = "";
+}
+
+function MM(){
+    const arr = lista;
+    const min = Math.min (...arr);
+    const max = Math.max (...arr);
+    var rest1 = document.getElementById('respost1');
+    rest1. innerHTML = ("O menor valor é:" + min + "<br>" + "O maior valor é:" + max);
+}
+
+    </script>
+    
+
+</head>
+<body>
